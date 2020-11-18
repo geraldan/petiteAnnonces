@@ -20,39 +20,42 @@ $information = $pdoStat->fetchAll();
     <title>Document</title>
 </head>
 <body>
-        <h1>article form</h1>
-        <form action="base.php" method="POST">
+
+        <form action="../petiteAnnonces/base.php" method="POST">
+           <h1>article form</h1>
            <h3>step 1: identity </h3>
            <div class="box">
-               <label>First Name</label>
-               <input name="first_name" type="text">
-            </div>
+               <label class="subtitle">First Name</label>
+               <input class="inbox" name="first_name" type="text" required>
+           </div>
             <div class="box">
-                <label>Name</label>
-                <input name="name" type="text">
+                <label class="subtitle">Name</label>
+                <input class="inbox" name="name" type="text" required>
             </div>
             <h3>step 2: contact </h3>
             <div class="box">
-                <label>Phone Number</label>
-                <input name="phone" type="text">
+                <label class="subtitle">Phone Number</label>
+                <input class="inbox" name="phone" type="text" minlength="8" required>
             </div>
             <div class="box">
-                <label>Mail</label>
-                <input name="mail" type="text">
+                <label class="subtitle">Mail</label>
+                <input class="mail" type="email" name="mail" required>
             </div>
             <h3>step 3: redaction</h3>
             <div class="box">
-            <label for="">Selection du theme</label>
-            <select>
+            <label for="" class="subtitle">Select theme</label>
+            <select name="category">
              <!--le foreach sert a afficher les inforormation il prend la premiere ligne de la table puis la deuxieme et ainsi de suite -->
                      <?php foreach ($information as $cat ): ?>
-                     <option> <?= $cat['category'] ?> </option>
+                     <option value="<?= $cat['category'] ?>"> <?= $cat['category'] ?> </option>
                      <?php endforeach; ?>
             </select>
             </div>
-            <div>
+            <div class="box">
                 <label for="write" class="lwrite">write to</label><br>
-                <textarea name="text_area" class="write" cols="30" rows="10"></textarea>
+                <textarea name="text_area" class="write" cols="30" rows="10" required></textarea>
             </div>
+            <input class="btn"  type="submit">
         </form>
+</body>
 </html>

@@ -4,7 +4,7 @@
 $pdo = new PDO('mysql:dbname=petit_annonce;host=127.0.0.1', 'root', '', [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ]);
-
+var_dump($_POST);
 //recuperation du donner de formulaire
 
 $name = $_POST['name'];
@@ -12,17 +12,15 @@ $first_name = $_POST['first_name'];
 $phone = $_POST['phone'];
 $mail = $_POST['mail'];
 $category = $_POST['category'];
-$text_ad = $_POST['text_ad'];
+$text_area = $_POST['text_area'];
 
 // inserer dans la table
 
-$sql = " INSERT INTO form(name, first_name, phone, mail, category, text_ad ) 
+$sql = " INSERT INTO form (name, first_name, phone, mail, category, text_area ) 
 VALUES
-('$name', '$first_name', '$phone', '$mail', '$categorys', '$text_ad')";
+('$name', '$first_name', '$phone', '$mail', '$category', '$text_area')";
 
 //execution de la requete
 $pdo->exec($sql);
-
-header('location: http://localhost/exe-form/affichage_bdd.php');
 
 ?>
