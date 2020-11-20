@@ -26,37 +26,34 @@ $information = $sql->fetchALL();
 </head>
 <body>
     <div>
-        <h1>Lolllilo</h1>
+        <h1>LES DERNIERES PETITES ANNONCES</h1>
         <?php foreach ($information as $contact):?>
             <div class="boite">
-                <div class="first_name">
-                    <p>Nom :
+                <hr>
+
+                    <p class="test">Nom :
                         <?= $contact[ 'first_name'] ?> </p>
-                </div>
-                <div class="name">
-                    <p> Prénom :
-                        <?= $contact['name'] ?> </p>
-                </div>
-                <div class="phone">
-                    <p> mail :
-                        <?= $contact[ 'phone']?></p>
-                </div>
-                <div class="mail">
-                    <p> adresse :
-                        <?= $contact[ 'mail']?></p>
-                </div>
-                <div class="category">
+
                     <p> category :
                         <?= $contact[ 'category']?></p>
-                </div>
-                <div class="text">
+
                     <p> texte area :
                         <?= $contact[ 'text_area']?></p>
 
-                </div>
+                    <p> Prénom :
+                        <?= $contact['name'] ?> </p>
 
+                    <p> mail :
+                        <?= $contact[ 'phone']?></p>
+
+                    <p> adresse :
+                        <?= $contact[ 'mail']?></p>
+
+                <!--lien vers annonce php en lien avec lid en vois moi sur l'annonce selectionner-->
+                <a class="btn" href="annonce.php?id=<?= $contact['id'] ?> ">plus d'information</a>
             </div>
         <?php endforeach; ?>
+
     </div>
 </body>
 </html>

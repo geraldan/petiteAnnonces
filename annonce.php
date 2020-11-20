@@ -1,29 +1,32 @@
 <?php
-//connection a la base de donner
-$pdo = new PDO('mysql:dbname=petit_annonce;host=127.0.0.1', 'root', '', [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-]);
-//recupaire les information de la base de donné. (select *) selectionne tout le tableu de la base de donné et (FROM)veux dire de (form)selectionne la table du tableu
-$sql = $pdo->query("SELECT * FROM form");
 
-//execute la requete
+$connect = new PDO('mysql:host=localhost;dbname=petit_annonce','root','');
+//recupaire l'id dans l'url
+$id = $_GET['id'];
+//transforme la valeur en entier
+$id = intval($id);
+// selectionne tout de la table form ou l'id est = $id( selectionne le bonne id donc permer dans predre la bonne annonce)
+$sql = $connect->prepare("SELECT * FROM form WHERE id = '$id' ");
+
 $sql->execute();
-//tout afficher dans un tableau
-$information = $sql->fetchALL();
+
+$contact = $sql->fetch();
 ?>
+
 <!doctype html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>liste des annonces</title>
+    <title>Document</title>
 </head>
 <body>
 <div>
     <h1>LES PETITES ANNONCES</h1>
-    <?php foreach ($information as $contact):?>
+
         <div class="boite">
             <hr>
 
@@ -44,16 +47,17 @@ $information = $sql->fetchALL();
 
             <p> adresse :
                 <?= $contact[ 'mail']?></p>
-<!--lien vers annonce php en lien avec lid en vois moi sur l'annonce selectionner-->
-            <a href="annonce.php?id=<?= $contact['id'] ?> ">plus d'information</a>
 
-
-
-
+            <a class="btn" href="suprimer.php?id=<?= $contact['id'] ?> ">Supprimer</a>
+            <a class="btn" href="modifier.php?id=<?= $contact['id'] ?> ">Modifier</a>
 
         </div>
-    <?php endforeach; ?>
+
+
+        <div>
+            <hr>
+
+        </div>
 </div>
 </body>
-
 </html>

@@ -20,7 +20,7 @@ $information = $pdoStat->fetchAll();
     <title>Document</title>
 </head>
 <body>
-
+<!-- action de form definie -->
         <form action="../petiteAnnonces/base.php" method="POST">
            <h1>article form</h1>
            <h3>step 1: identity </h3>

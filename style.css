@@ -4,7 +4,7 @@
 
 }
 body{
-    background-color:rgba(76,208,118,1);
+    background-color: rgb(76, 208, 118);
     display: flex;
     justify-content: center;
 }
@@ -15,21 +15,22 @@ form{
     max-width: 70%;
 }
 h1{
+    margin-top: 1em;
     text-align: center;
-    color: antiquewhite;
+    color: #e3ffe5;
     font-size: 3em;
 }
 h3{
     margin-left: 0.5em;
-    color: antiquewhite;
+    color: #e3ffe5;
     font-size: 2em;
 }
 .box{
     padding: 2% 4% 2% 4%;
     margin: 0.5% 0;
-    border: solid 2px antiquewhite;
+    border: solid 2px #e3ffe5;
     border-radius:0.5em ;
-    color: antiquewhite;
+    color: #e3ffe5;
     background-color:rgba(255,255,255,0.25);
     display: flex;
     justify-content: space-between;
@@ -67,20 +68,51 @@ textarea {
 .lwrite{
     font-size: 1.3em;
 }
-.btn{
+
+.btn, a {
+    text-decoration: none;
     background:rgba(33,104,104,1);
-    color: antiquewhite;
+    color: #e3ffe5;
     font-size: medium;
-    margin: 0.5em auto;
+    margin: 1em 10em;
     text-align: center;
-    padding: 1em;
+    padding: 3% 2%;
+    display: block;
+    border: none;
+    border-radius: 0.2em;
 
 }
+
+p{
+    color: #e3ffe5;
+    text-align: center;
+    font-size: larger;
+
+
+}
+.boite{
+    overflow-y: hidden;
+    height: 100px;
+}
+.boite:hover{
+    height: auto;
+}
+p{
+
+}
+hr{
+    margin: 1em;
+    background-color: #399b57;
+    padding-top: 2px;
+    border: none;
+}
+
 
 @media screen and (max-width: 900px) {
 
     h1{
         font-size:medium;
+        margin-top: 1em;
     }
     h3{
         font-size: small;
@@ -124,7 +156,7 @@ textarea {
     }
     .btn{
         background:rgba(33,104,104,1);
-        color: antiquewhite;
+        color: #e3ffe5;
         font-size: small;
         padding: 2% 20%;
         margin: 0.5em auto;
