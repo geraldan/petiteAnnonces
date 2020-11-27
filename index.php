@@ -27,6 +27,7 @@ $information = $sql->fetchALL();
 <body>
     <div>
         <h1>LES DERNIERES PETITES ANNONCES</h1>
+
         <?php foreach ($information as $contact):?>
             <div class="boite">
                 <hr>
@@ -53,7 +54,9 @@ $information = $sql->fetchALL();
                 <a class="btn" href="annonce.php?id=<?= $contact['id'] ?> ">plus d'information</a>
             </div>
         <?php endforeach; ?>
-
+        <h2>
+            <a href="liste_annonce.php">Tout les annonces</a>
+        </h2>
     </div>
 </body>
 </html>

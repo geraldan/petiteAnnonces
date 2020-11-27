@@ -48,11 +48,11 @@ $information = $sql->fetchALL();
             <a href="annonce.php?id=<?= $contact['id'] ?> ">plus d'information</a>
 
 
-
-
-
         </div>
     <?php endforeach; ?>
+   <h2>
+        <a href="index.php">Les dernieres petites annonces </a>
+   </h2>
 </div>
 </body>
 

@@ -20,6 +20,7 @@ h1{
     color: #e3ffe5;
     font-size: 3em;
 }
+
 h3{
     margin-left: 0.5em;
     color: #e3ffe5;
@@ -46,7 +47,7 @@ h3{
 input{
     border: none;
     border-radius: 0.2em;
-    padding: 0.5% 20% 0.5% 0.5% ;
+    width: 350px;
 
 }
 
@@ -61,7 +62,8 @@ textarea {
     border: none;
     border-radius: 0.2em;
     resize: none;
-    padding: 0 16% 0 0;
+    width: 350px;
+
 
 
 }
@@ -69,21 +71,40 @@ textarea {
     font-size: 1.3em;
 }
 
+
 .btn, a {
     text-decoration: none;
     background:rgba(33,104,104,1);
     color: #e3ffe5;
+    width: 250px;
+    padding: 1em 0;
     font-size: medium;
-    margin: 1em 10em;
+    margin:1em auto;
     text-align: center;
-    padding: 3% 2%;
     display: block;
     border: none;
     border-radius: 0.2em;
 
 }
+.sub{
+    background:rgba(33,104,104,1);
+    width: 200px;
+    height: 50px;
+    margin:1em auto;
+    color:#e3ffe5 ;
+    font-size: medium;
+    padding: 1em;
+    border: none;
+    border-radius: 0.2em;
+}
+.link{
+    background-color: gray;
+    margin: 1em;
+}
 
 p{
+    width: 90%;
+    margin-left: 5%;
     color: #e3ffe5;
     text-align: center;
     font-size: larger;
@@ -93,6 +114,7 @@ p{
 .boite{
     overflow-y: hidden;
     height: 100px;
+
 }
 .boite:hover{
     height: auto;
@@ -128,7 +150,7 @@ hr{
    }
     .inbox{
         margin: auto;
-        max-width: 70px;
+        max-width: 200px;
     }
     .subtitle {
         padding: 0 0 1% 0;
@@ -157,7 +179,7 @@ hr{
     .btn{
         background:rgba(33,104,104,1);
         color: #e3ffe5;
-        font-size: small;
+        width: auto;
         padding: 2% 20%;
         margin: 0.5em auto;
         text-align: center;
@@ -166,4 +188,5 @@ hr{
 
 
     }
+
 }

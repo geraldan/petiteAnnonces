@@ -1,5 +1,5 @@
 <?php
-
+//conection a la base de donnee
 $connect = new PDO('mysql:host=localhost;dbname=petit_annonce','root','');
 //recupaire l'id dans l'url
 $id = $_GET['id'];
@@ -26,8 +26,9 @@ $contact = $sql->fetch();
 <body>
 <div>
     <h1>LES PETITES ANNONCES</h1>
+    <a class="btn" href="index.php">accueil</a>
 
-        <div class="boite">
+        <div class="boites">
             <hr>
 
             <p class="test">Nom :
