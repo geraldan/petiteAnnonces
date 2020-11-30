@@ -1,8 +1,7 @@
 <?php
-//conection base de donnee
-$pdo = new PDO('mysql:dbname=petit_annonce;host=127.0.0.1', 'root', '', [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-]);
+//connection a la basse de donné fasson simplifier en faisant une feuille separer pour ce conetcter a la basse de donnee ici nommé pdo.php et 'require' pour apeler la page ceci est une fonction
+require ("pdo.php");
+$pdo = pdo();
 
 //on recupaire l'id dans l'url
 $id = $_GET['id'];

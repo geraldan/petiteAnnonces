@@ -1,8 +1,8 @@
 <?php
 
-$pdo = new PDO('mysql:dbname=petit_annonce;host=127.0.0.1', 'root', '', [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-]);
+//connection a la basse de donné fasson simplifier en faisant une fichier separer pour ce conetcter a la basse de donnee 'pdo.php' et 'require' pour apeler la page ceci est une fonction integrer a php
+require ("pdo.php");
+$pdo = pdo();
 var_dump($_POST);
 $name = $_POST['name'];
 $first_name = $_POST['first_name'];

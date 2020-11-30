@@ -1,12 +1,13 @@
 <?php
-//conection a la base de donnee
-$connect = new PDO('mysql:host=localhost;dbname=petit_annonce','root','');
+//connection a la basse de donné fasson simplifier en faisant une feuille separer pour ce conetcter a la basse de donnee ici nommé pdo.php et 'require' pour apeler la page ceci est une fonction
+require ("pdo.php");
+$pdo = pdo();
 //recupaire l'id dans l'url
 $id = $_GET['id'];
 //transforme la valeur en entier
 $id = intval($id);
 // selectionne tout de la table form ou l'id est = $id( selectionne le bonne id donc permer dans predre la bonne annonce)
-$sql = $connect->prepare("SELECT * FROM form WHERE id = '$id' ");
+$sql = $pdo->prepare("SELECT * FROM form WHERE id = '$id' ");
 
 $sql->execute();
 

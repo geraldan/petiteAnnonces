@@ -1,10 +1,8 @@
 <?php
 
-//connection a la base de donner
-$pdo = new PDO('mysql:dbname=petit_annonce;host=127.0.0.1', 'root', '', [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-]);
-var_dump($_POST);
+//connection a la basse de donné fasson simplifier en faisant une feuille separer pour ce conetcter a la basse de donnee ici nommé pdo.php et 'require' pour apeler la page ceci est une fonction
+require ("pdo.php");
+$pdo = pdo();
 //recuperation du donner de formulaire
 
 $name = $_POST['name'];

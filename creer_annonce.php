@@ -1,13 +1,15 @@
 <?php
 
-$connect = new PDO('mysql:host=localhost;dbname=petit_annonce','root','');
+//connection a la basse de donné fasson simplifier en faisant une feuille separer pour ce conetcter a la basse de donnee ici nommé pdo.php et 'require' pour apeler la page ceci est une fonction
+require ("pdo.php");
+$pdo = pdo();
 
-$pdoStat = $connect->prepare('SELECT * FROM categorie');
+$sql = $pdo->prepare('SELECT * FROM categorie');
 
-$pdoStat->execute();
+$sql->execute();
 
 // maitre les informations dans un tableau
-$information = $pdoStat->fetchAll();
+$information = $sql->fetchAll();
 ?>
 <!doctype html>
 <html lang="fr" xmlns="http://www.w3.org/1999/html">
