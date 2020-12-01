@@ -2,7 +2,7 @@
 
 //connection a la basse de donné fasson simplifier en faisant une fichier separer pour ce conetcter a la basse de donnee 'pdo.php' et 'require' pour apeler la page ceci est une fonction integrer a php
 require ("pdo.php");
-$pdo = pdo();
+$pdo = (new Connection())->pdo();
 var_dump($_POST);
 $name = $_POST['name'];
 $first_name = $_POST['first_name'];

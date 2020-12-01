@@ -1,7 +1,7 @@
 <?php
 //connection a la basse de donné fasson simplifier en faisant une feuille separer pour ce conetcter a la basse de donnee ici nommé pdo.php et 'require' pour apeler la page ceci est une fonction
 require ("pdo.php");
-$pdo = pdo();
+$pdo = (new Connection())->pdo();
 
 /* requête le 'desc limit' cible le dernier article crée */
 $sql = $pdo->query("SELECT * FROM form ORDER BY id DESC LIMIT 6");

@@ -2,8 +2,8 @@
 //connection a la basse de donné avec 'require' en faisant un fichier separer ,
 // pour ce connetcter a la basse de donnee 'pdo.php'
 require ("pdo.php");
-// apelle de la foction pour ce co a la BDD
-$pdo = pdo();
+// apelle de la class pour ce co a la BDD
+$pdo = (new Connection())->pdo();
 //bien prendre l id dans l'url
 $id = $_GET['id'];
 // dis que c'est un entier

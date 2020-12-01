@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ae721fa-c49b-4ddc-bca7-f674addac3da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pdo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/annonce.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/base.php" afterDir="false" />
@@ -11,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/liste_annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/liste_annonce.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modif_base.php" beforeDir="false" afterPath="$PROJECT_DIR$/modif_base.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modifier.php" beforeDir="false" afterPath="$PROJECT_DIR$/modifier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdo.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/suprimer.php" beforeDir="false" afterPath="$PROJECT_DIR$/suprimer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +74,7 @@
       <workItem from="1606293690942" duration="6959000" />
       <workItem from="1606394222225" duration="2729000" />
       <workItem from="1606741459076" duration="2953000" />
+      <workItem from="1606810928523" duration="1772000" />
     </task>
     <servers />
   </component>

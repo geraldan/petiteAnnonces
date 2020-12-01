@@ -1,7 +1,7 @@
 <?php
 //connection a la basse de donné fasson simplifier en faisant une feuille separer pour ce conetcter a la basse de donnee ici nommé pdo.php et 'require' pour apeler la page ceci est une fonction
 require ("pdo.php");
-$pdo = pdo();
+$pdo = (new Connection())->pdo();
 //recupaire les information de la base de donné. (select *) selectionne tout le tableu de la base de donné et (FROM)veux dire de (form)selectionne la table du tableu
 $sql = $pdo->query("SELECT * FROM form");
 

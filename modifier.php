@@ -1,7 +1,7 @@
 <?php
 //connection a la basse de donné fasson simplifier en faisant une feuille separer pour ce conetcter a la basse de donnee ici nommé pdo.php et 'require' pour apeler la page ceci est une fonction
 require ("pdo.php");
-$pdo = pdo();
+$pdo = (new Connection())->pdo();
 
 //on recupaire l'id dans l'url
 $id = $_GET['id'];
